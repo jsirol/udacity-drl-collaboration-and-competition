@@ -2,7 +2,9 @@
 Train two agents to play tennis using Deep Deterministic Policy Gradients.
 
 # Project details
-The task in this project was to train an agent (or agents) to solve an environment where 2 agents play a tennis-like game and try to keep the game running by hitting the ball over the net. The task is episodic and considered solved when the average score received 100 consecutive episodes exceeds +0.5. The score of an episode is defined to be the maximum score over the two agents on the episode.
+In this environment, two agents control rackets to bounce a ball over a net. If an agent hits the ball over the net, it receives a reward of +0.1. If an agent lets a ball hit the ground or hits the ball out of bounds, it receives a reward of -0.01. Thus, the goal of each agent is to keep the ball in play.
+
+The task is episodic and considered solved when the average score received 100 consecutive episodes exceeds +0.5. The score of an episode is defined to be the maximum score over the two agents on the episode.
 
 In the provided solution, the agent is trained for roughly 1400 episodes and it gains an average reward of 
 +1.74 over 100 consecutive episodes around 1300 episodes mark. The environment is considered first solved after 1158 episodes.
@@ -14,10 +16,10 @@ In the provided solution, the agent is trained for roughly 1400 episodes and it 
 The agent receives a reward of `+0.1` for each time the ball is hit over the net and `-0.01` when the agent lets the ball hit the ground or hits the ball out of bounds.
 
 ## State space
-The continuous state space has 8 dimensions. The full vector observation consist of 3 stacked states, so the total size of observation space is 24.
+The continuous state space has 8 dimensions corresponding to the position and velocity of the ball and racket. The full vector observation consist of 3 stacked states, so the total size of observation space is 24. Each agent receives its own, local observation.
 
 ## Actions
-Each action (of a single agent) is a vector with 2 numbers, that correspond to movement (towards or away from the net) and jumping. Each entry in the vector is a float between -1 and 1.
+Two continuous actions are available, corresponding to movement toward (or away from) the net, and jumping.
 
 
 # Getting started
