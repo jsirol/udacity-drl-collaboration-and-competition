@@ -1,5 +1,5 @@
 # udacity-drl-collaboration-and-competition
-Udacity Deep Reinforecement Learning Nanodegree project repo
+Train two agents to play tennis using Deep Deterministic Policy Gradients.
 
 # Project details
 The task in this project was to train an agent (or agents) to solve an environment where 2 agents play a tennis-like game and try to keep the game running by hitting the ball over the net. The task is episodic and considered solved when the average score received 100 consecutive episodes exceeds +0.5. The score of an episode is defined to be the maximum score over the two agents on the episode.
